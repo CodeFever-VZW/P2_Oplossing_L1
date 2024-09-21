@@ -21,6 +21,16 @@ def zet(bord, rij, kolom, speler):
     return bord
 
 
+def controleer_input(bord, rij, kolom):
+    rij_is_geldig = 0 <= rij <= 2       # Geldig rijnummer
+    kolom_is_geldig = 0 <= kolom <= 2   # Geldig kolomnummer
+
+    if rij_is_geldig and kolom_is_geldig:
+        if bord[rij][kolom] == ' ':     # Controle of vakje vrij is
+            return True
+    return False                        # Als we nergens return True deden, return dan False
+
+
 def controleer_winnaar(bord):
     if controleer_horizontaal(bord) or controleer_verticaal(bord) or controleer_diagonaal(bord):
         return True
