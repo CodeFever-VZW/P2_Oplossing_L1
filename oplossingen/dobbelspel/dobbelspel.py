@@ -1,5 +1,6 @@
 import random
 
+
 def dobbel():
     rol1 = random.randint(1, 6)
     rol2 = random.randint(1, 6)
